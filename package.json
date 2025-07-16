@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-   
+    // మీ ఇతర డిపెండెన్సీలు ఇక్కడ ఉంటాయి
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "CI=false react-scripts build",  
+    "build": "chmod +x node_modules/.bin/react-scripts && react-scripts build", // ఈ లైన్‌ను మార్చండి
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

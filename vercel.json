@@ -1,7 +1,4 @@
 {
-  "build": {
-    "env": {
-      "CI": "false"
-    }
-  }
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "npm install && chmod +x node_modules/.bin/* && npm run build"
 }

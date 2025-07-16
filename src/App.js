@@ -5,10 +5,11 @@ function App() {
   const [friends, setFriends] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:8000/friends")
-      .then((response) => setFriends(response.data))
-      .catch((error) => console.error("API error:", error));
-  }, []);
+  axios.get("https://mana-dosth-backend.onrender.com/friends")
+    .then((response) => {
+      setFriends(response.data);
+    });
+}, []);
 
   return (
     <div style={{ fontFamily: "Arial", padding: "20px" }}>

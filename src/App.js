@@ -15,7 +15,7 @@ function App() {
     setLoading(true);
 
     try {
-      const res = await axios.post("https://mana-dosth-be.onrender.com", {
+      const res = await axios.post("https://mana-dosth-be.onrender.com/ask", {
         query: userMessage.text,
       });
 
@@ -35,6 +35,7 @@ function App() {
   return (
     <div style={{ maxWidth: 700, margin: "auto", padding: 20 }}>
       <h1>🤝 Mana Dosth Chat</h1>
+
       <div
         style={{
           border: "1px solid #ddd",
@@ -43,6 +44,7 @@ function App() {
           height: "400px",
           overflowY: "auto",
           background: "#f9f9f9",
+          marginBottom: 10,
         }}
       >
         {chat.map((msg, idx) => (
@@ -66,6 +68,7 @@ function App() {
             </div>
           </div>
         ))}
+
         {loading && (
           <div style={{ textAlign: "left", marginBottom: 10 }}>
             <div
@@ -82,12 +85,12 @@ function App() {
         )}
       </div>
 
-      <div style={{ display: "flex", marginTop: 10 }}>
+      <div style={{ display: "flex" }}>
         <input
           type="text"
           value={question}
           onChange={(e) => setQuestion(e.target.value)}
-          placeholder="Type in any language..."
+          placeholder="Ask anything in Telugu, Hindi, Tamil..."
           style={{ flex: 1, padding: 10 }}
           onKeyDown={(e) => e.key === "Enter" && handleAsk()}
         />

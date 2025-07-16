@@ -5,7 +5,7 @@ function App() {
   const [friends, setFriends] = useState([]);
 
   useEffect(() => {
-  axios.get("https://mana-dosth-backend.onrender.com/friends")
+  axios.get("https://mana-dosth-be.onrender.com/friends")
     .then((response) => {
       setFriends(response.data);
     });
